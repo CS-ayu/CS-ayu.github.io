@@ -28,6 +28,6 @@ window.CONTEST = {
   finalVenue: "10:00 ~, 안양대학교 아름다운리더관 4층 컨퍼런스룸 ",               // 예: "13:00, 아리관 ○○○호"
   host: "안양대학교",           // 주최
   contactPhone: "031-467-0700",
-  contactEmail: "cho@anyang.ac.kr",
+  contactEmail: "seha@gs.anyang.ac.kr",
   retention: "대회 종료 후 1년"              // 개인정보 보유 기간 (교내 규정에 맞게)
 };
