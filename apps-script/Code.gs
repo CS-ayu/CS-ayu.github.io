@@ -10,7 +10,7 @@ const OPEN_AT  = new Date('2026-10-21T09:00:00+09:00');   // config.js의 applyO
 const CLOSE_AT = new Date('2026-11-06T23:59:59+09:00');   // config.js의 applyClose와 같게
 const TEST_MODE = false;          // true면 기간과 관계없이 접수(시험용). 배포 전 false로.
 const SEND_CONFIRMATION = true;   // 대표 이메일로 접수 확인 메일 보내기
-const CONTACT = '안양대학교 컴퓨터공학과 [전화번호] / [이메일]';
+const CONTACT = '안양대학교 컴퓨터공학과 031-467-0700 / cho@anyang.ac.kr';
 const SHEET_NAME = '신청';
 // ─────────────────────────────────────────────────────
 
