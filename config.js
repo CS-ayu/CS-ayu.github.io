@@ -9,7 +9,7 @@
 window.CONTEST = {
   /* 구글 Apps Script 웹 앱 URL (README의 1단계에서 받은 주소).
      비워 두면 신청서가 '접수 준비 중'으로 표시됩니다. */
-  applyEndpoint: "",
+  applyEndpoint: "https://script.google.com/macros/s/AKfycbzVbkzPguyVlxp7l68h8RWeEfhasOloEykL0P-qKiSoFemdfdI1WCrWSP4p7iN09ALZ/exec",
 
   /* 신청 기간 밖에서도 신청서를 열어 시험해 볼 때만 true. 배포 전 반드시 false. */
   forceOpen: false,
