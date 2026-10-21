@@ -9,7 +9,7 @@
 window.CONTEST = {
   /* 구글 Apps Script 웹 앱 URL (README의 1단계에서 받은 주소).
      비워 두면 신청서가 '접수 준비 중'으로 표시됩니다. */
-  applyEndpoint: "https://script.google.com/macros/s/AKfycbzVbkzPguyVlxp7l68h8RWeEfhasOloEykL0P-qKiSoFemdfdI1WCrWSP4p7iN09ALZ/exec",
+  applyEndpoint: "https://script.google.com/macros/s/AKfycbzztLiPpo-pSLaGl65ELDy4ibljwNX0TPPazorws4PU3n71y4Z6Kp8rn6GAzZI1ohRB/exec",
 
   /* 신청 기간 밖에서도 신청서를 열어 시험해 볼 때만 true. 배포 전 반드시 false. */
   forceOpen: false,
@@ -27,7 +27,7 @@ window.CONTEST = {
 
   finalVenue: "10:00 ~, 안양대학교 아름다운리더관 4층 컨퍼런스룸 ",               // 예: "13:00, 아리관 ○○○호"
   host: "안양대학교",           // 주최
-  contactPhone: "031-467-0700",
+  contactPhone: "031-463-1347",
   contactEmail: "seha@gs.anyang.ac.kr",
   retention: "대회 종료 후 1년"              // 개인정보 보유 기간 (교내 규정에 맞게)
 };
