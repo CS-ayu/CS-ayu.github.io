@@ -248,7 +248,7 @@
                 <div class="field team-only full"><label class="req" for="teamName">팀명</label><input id="teamName" name="teamName" maxlength="30" autocomplete="off"></div>
                 <div class="field"><label class="req" for="l-name">이름</label><input id="l-name" maxlength="20" autocomplete="name" required></div>
                 <div class="field"><label class="req" for="l-dept">학과(전공)</label><input id="l-dept" maxlength="40" required placeholder="예: 컴퓨터공학과"></div>
-                <div class="field"><label class="req" for="l-sid">학번</label><input id="l-sid" inputmode="numeric" maxlength="10" pattern="[0-9]{6,10}" required></div>
+                <div class="field"><label class="req" for="l-sid">학번</label><input id="l-sid" maxlength="15" pattern="[A-Za-z0-9]{4,15}" autocapitalize="characters" autocomplete="off" spellcheck="false" placeholder="예: 2026123456" required></div>
                 <div class="field"><label class="req" for="l-year">학년</label><select id="l-year" required><option value="">선택</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5 이상</option></select></div>
                 <div class="field"><label class="req" for="l-phone">휴대전화</label><input id="l-phone" type="tel" inputmode="tel" maxlength="13" autocomplete="tel" placeholder="010-0000-0000" pattern="01[016789]-?[0-9]{3,4}-?[0-9]{4}" required></div>
                 <div class="field"><label class="req" for="l-email">이메일</label><input id="l-email" type="email" maxlength="80" autocomplete="email" required><span class="hint">접수 확인 메일을 받을 주소</span></div>
