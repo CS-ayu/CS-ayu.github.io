@@ -75,7 +75,10 @@ function doPost(e) {
 }
 
 function validate(d) {
-  const SID = /^\d{6,10}$/, PHONE = /^01[016789]-?\d{3,4}-?\d{4}$/, MAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  // 학번: 영문·숫자 4~15자, 대문자로 통일
+  if (d.leader) d.leader.sid = String(d.leader.sid || '').trim().toUpperCase();
+  if (Array.isArray(d.members)) d.members.forEach(function (m) { if (m) m.sid = String(m.sid || '').trim().toUpperCase(); });
+  const SID = /^[A-Z0-9]{4,15}$/, PHONE = /^01[016789]-?\d{3,4}-?\d{4}$/, MAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const YEARS = ['1', '2', '3', '4', '5 이상'];
   if (d.type !== 'team' && d.type !== 'solo') return '신청 유형을 선택해 주세요.';
   if (!d.consentPrivacy) return '개인정보 수집·이용에 동의해야 신청할 수 있습니다.';
