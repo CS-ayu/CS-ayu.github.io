@@ -148,7 +148,7 @@
       '<div class="fgrid">' +
       '<div class="field"><label class="req" for="m' + i + '-name">이름</label><input id="m' + i + '-name" maxlength="20" required></div>' +
       '<div class="field"><label class="req" for="m' + i + '-dept">학과(전공)</label><input id="m' + i + '-dept" maxlength="40" required></div>' +
-      '<div class="field"><label class="req" for="m' + i + '-sid">학번</label><input id="m' + i + '-sid" inputmode="numeric" maxlength="10" pattern="[0-9]{6,10}" required></div>' +
+      '<div class="field"><label class="req" for="m' + i + '-sid">학번</label><input id="m' + i + '-sid" maxlength="15" pattern="[A-Za-z0-9]{4,15}" autocapitalize="characters" autocomplete="off" spellcheck="false" required></div>' +
       '<div class="field"><label class="req" for="m' + i + '-year">학년</label>' + yearSelect('m' + i + '-year') + '</div>' +
       '</div>';
     $('.danger', box).addEventListener('click', function () { box.remove(); renumber(); });
@@ -211,7 +211,7 @@
         var name = label ? label.textContent.replace(/\s*\*$/, '') : '항목';
         var who = el.closest('.member') ? $('b', el.closest('.member')).textContent + '의 ' : '';
         var msg = el.validity.valueMissing ? who + name + '을(를) 입력해 주세요.'
-          : el.id.slice(-3) === 'sid' ? who + '학번은 숫자 6~10자리로 입력해 주세요.'
+          : el.id.slice(-3) === 'sid' ? who + '학번은 영문·숫자 4~15자로 입력해 주세요. (공백·기호 제외)'
           : el.type === 'email' ? '이메일 주소 형식을 확인해 주세요.'
           : el.type === 'tel' ? '휴대전화 번호를 010-0000-0000 형식으로 입력해 주세요.'
           : who + name + '을(를) 확인해 주세요.';
@@ -219,7 +219,7 @@
       }
     }
     if (team) {
-      var sids = [v('l-sid')].concat($$('.member', membersEl).map(function (b) { return $('input[id$="-sid"]', b).value.trim(); }));
+      var sids = [v('l-sid').toUpperCase()].concat($$('.member', membersEl).map(function (b) { return $('input[id$="-sid"]', b).value.trim().toUpperCase(); }));
       var seen = {};
       for (var j = 0; j < sids.length; j++) {
         if (seen[sids[j]]) return showErr('같은 학번(' + sids[j] + ')이 두 번 입력되었습니다.', null), false;
@@ -235,10 +235,10 @@
     return {
       type: team ? 'team' : 'solo',
       teamName: team ? v('teamName') : '',
-      leader: { name: v('l-name'), dept: v('l-dept'), sid: v('l-sid'), year: v('l-year'), phone: v('l-phone'), email: v('l-email') },
+      leader: { name: v('l-name'), dept: v('l-dept'), sid: v('l-sid').toUpperCase(), year: v('l-year'), phone: v('l-phone'), email: v('l-email') },
       members: team ? $$('.member', membersEl).map(function (b) {
         var g = function (s) { return ($('[id$="-' + s + '"]', b).value || '').trim(); };
-        return { name: g('name'), dept: g('dept'), sid: g('sid'), year: g('year') };
+        return { name: g('name'), dept: g('dept'), sid: g('sid').toUpperCase(), year: g('year') };
       }) : [],
       field: v('field'),
       idea: v('idea'),
