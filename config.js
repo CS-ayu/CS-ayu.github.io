@@ -17,7 +17,7 @@ window.CONTEST = {
   /* 예선 자료 내려받기: 구글 드라이브 공유 링크를 따옴표 안에 그대로 붙여 넣으세요.
      (드라이브 공유 설정은 '링크가 있는 모든 사용자 - 뷰어') 비워 두면 '준비 중'으로 표시됩니다. */
   downloads: {
-    template: "",   // 예선 발표자료 템플릿 (pptx)
+    template: "https://drive.google.com/file/d/1-_JZrd5gvFCSn1C_gxprcF3NApIrJP0W/view?usp=sharing",   // 예선 발표자료 템플릿 (pptx)
     guide: ""       // 예선 가이드라인 (pdf, 선택. 비워 두면 버튼이 숨겨집니다)
   },
 
