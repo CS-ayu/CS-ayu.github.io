@@ -81,9 +81,9 @@
       ['검증 및 한계 인식', 10, '검증 결과를 과장 없이 해석하고 한계를 밝혔는가']
     ],
     pre: [
-      ['문제 정의·필요성', 30, '대상과 상황이 구체적인가, 해결할 가치가 있는가'],
-      ['AI 활용 아이디어의 적절성', 30, '이 문제에 AI가 필요한 이유와 활용 방법이 타당한가'],
-      ['실현 가능성', 25, '개발 기간 안에 만들 수 있는 범위와 계획인가, 데이터 확보 방안이 있는가'],
+      ['문제 정의·필요성', 30, '대상과 상황이 구체적인가, 근거가 있는가, 해결할 가치와 기대 효과가 있는가'],
+      ['AI 활용 아이디어의 적절성', 30, '이 문제에 AI가 필요한 이유, 활용 방법과 모델·도구 선택이 타당한가, 기존 방법과 다른 창의성·차별성이 있는가'],
+      ['실현 가능성', 25, '개발 기간 안에 만들 수 있는 범위와 계획인가, 데이터 확보 방안이 있는가, 팀원의 역할과 역량이 뒷받침되는가'],
       ['자료의 완성도', 15, '아이디어와 계획이 자료만으로 분명하게 전달되는가']
     ]
   };
@@ -119,6 +119,44 @@
     wi = (wi + 1) % words.length; slot.textContent = words[wi];
     slot.classList.remove('swap'); void slot.offsetWidth; slot.classList.add('swap');
   }, 2200);
+
+  /* ---------- preliminary downloads (Google Drive share links in config.js) ---------- */
+  function driveDirect(u) {
+    var m = /\/d\/([\w-]{10,})/.exec(u) || /[?&]id=([\w-]{10,})/.exec(u);
+    return m ? 'https://drive.google.com/uc?export=download&id=' + m[1] : u;
+  }
+  var DL = C.downloads || {};
+  [['template', '#dl-template'], ['guide', '#dl-guide']].forEach(function (p) {
+    var a = $(p[1]); if (!a) return;
+    if (DL[p[0]]) { a.href = driveDirect(DL[p[0]]); a.hidden = false; return; }
+    if (p[0] === 'guide') { a.hidden = true; return; }
+    a.removeAttribute('href'); a.setAttribute('aria-disabled', 'true');
+    var go = $('.go', a); if (go) go.textContent = '준비 중 · 곧 올립니다';
+  });
+
+  /* ---------- team list ---------- */
+  var teamList = $('#team-list'), TEAMS = C.teams || [];
+  if (teamList) {
+    if (!TEAMS.length) { var ts = $('#teams'); if (ts) ts.hidden = true; }
+    TEAMS.forEach(function (t) {
+      var li = document.createElement('li'); li.className = 'team';
+      li.innerHTML = '<span class="tf"></span><span class="tn"></span><span class="tt"></span>';
+      $('.tf', li).textContent = t.field || '분야 정하는 중';
+      $('.tn', li).textContent = t.name || '팀명 정하는 중';
+      $('.tt', li).textContent = t.topic || '주제 정하는 중';
+      if (!t.name) li.classList.add('tbd');
+      teamList.appendChild(li);
+    });
+    var tc = $('#team-count'); if (tc && TEAMS.length) tc.textContent = TEAMS.length + '팀';
+  }
+
+  /* ---------- once sign-up closes, point the main buttons at the preliminary kit ---------- */
+  if (close && now > close && $('#prelim')) {
+    $('a[href="#apply"]').forEach(function (a) {
+      a.href = '#prelim';
+      a.textContent = a.classList.contains('cta-s') ? '예선 템플릿' : '예선 템플릿 받기';
+    });
+  }
 
   /* ---------- application form ---------- */
   var form = $('#apply-form'); if (!form) return;
