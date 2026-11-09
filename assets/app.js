@@ -152,7 +152,7 @@
 
   /* ---------- once sign-up closes, point the main buttons at the preliminary kit ---------- */
   if (close && now > close && $('#prelim')) {
-    $('a[href="#apply"]').forEach(function (a) {
+    $$('a[href="#apply"]').forEach(function (a) {
       a.href = '#prelim';
       a.textContent = a.classList.contains('cta-s') ? '예선 템플릿' : '예선 템플릿 받기';
     });
