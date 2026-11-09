@@ -48,9 +48,9 @@ window.CONTEST = {
     { name: "문과의반란", field: "", topic: "" },
     { name: "에이아이", field: "", topic: "" },
     { name: "NATURA", field: "환경·에너지", topic: "강우·환경 데이터로 수질오염 위험 지역을 예측" },
-    { name: "", field: "캠퍼스 생활", topic: "코스모스 알림과 학교 규정 질의응답을 합친 캠퍼스 AI 비서" },   // 개인 신청 매칭팀 (팀명 정해지면 입력)
-    { name: "", field: "경영·회계", topic: "회계 공부·실무에서 막히는 점을 돕는 AI" },
-    { name: "", field: "건강·생활안전", topic: "공개 의료 데이터를 활용한 건강 정보 도우미" }
+    { name: "", field: "", topic: "" },   // 개인 신청 매칭팀 (팀명 정해지면 입력)
+    { name: "", field: "", topic: "" },
+    { name: "", field: "", topic: "" }
   ],
 
   schedule: {
