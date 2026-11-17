@@ -48,9 +48,9 @@ window.CONTEST = {
     { name: "문과의반란", field: "", topic: "" },
     { name: "에이아이", field: "", topic: "" },
     { name: "NATURA", field: "환경·에너지", topic: "강우·환경 데이터로 수질오염 위험 지역을 예측" },
-    { name: "", field: "", topic: "" },   // 개인 신청 매칭팀 (팀명 정해지면 입력)
-    { name: "", field: "", topic: "" },
-    { name: "", field: "", topic: "" }
+    { name: "SKYLINE AI", field: "", topic: "AI를 활용한 스마트 강의 관리 시스템" },   // 개인 신청 매칭팀
+    { name: "페이사이트", field: "", topic: "" },
+    { name: "하트", field: "", topic: "" }
   ],
 
   schedule: {
