@@ -31,7 +31,7 @@ window.CONTEST = {
     { name: "마프할랩", field: "교육·학습", topic: "ATmega128 학습을 돕는 AI 시뮬레이션" },
     { name: "김이서", field: "", topic: "AI가 낯선 사회적 약자도 AI 혜택을 누리게 돕는 서비스" },
     { name: "컴공23", field: "캠퍼스 생활", topic: "버튼 하나로 PC 네트워크 문제를 진단·해결하는 네트워크 닥터" },
-    { name: "OVERCLOCK", field: "기타", topic: "컴퓨터실 전력 사용을 분석해 미사용 기기를 자동 차단" },
+    { name: "OVERCLOCK", field: "교육·학습", topic: "회로 시뮬레이션 결과를 분석해 최적 소자값과 그 근거를 알려 주는 AI 학습 도구" },
     { name: "플랜티즈", field: "환경·에너지", topic: "신재생 발전 예측과 수급 균형 제어" },
     { name: "sudo없이말해", field: "캠퍼스 생활", topic: "욕설·비속어와 대화 맥락을 판별하는 AI 필터" },
     { name: "환전", field: "캠퍼스 생활", topic: "안양대 날씨에 맞춘 체감온도 기반 옷차림 추천" },
