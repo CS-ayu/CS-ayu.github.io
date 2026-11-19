@@ -38,19 +38,19 @@ window.CONTEST = {
     { name: "인생은 TRIP", field: "지역 상권·관광", topic: "여행 중 돌발 상황에 일정을 바꿔 주는 AI 여행 비서" },
     { name: "FOC", field: "캠퍼스 생활", topic: "상황에 맞는 캠퍼스 정보와 장소를 추천하는 플랫폼" },
     { name: "E4", field: "교육·학습", topic: "일정과 목표를 분석해 할 일을 제안하는 AI 자기관리" },
-    { name: "챗바퀴", field: "", topic: "" },
+    { name: "챗바퀴", field: "", topic: "마감 일정 정리와 행동 인식으로 미루기를 막는 AI 감독 '빼꼼'" },
     { name: "버그없는날", field: "기타", topic: "뽑기 결과를 분석해 재화 사용 계획을 세워 주는 서비스" },
     { name: "먀먀", field: "교육·학습", topic: "블록선도·수식을 인식해 제어공학 과제를 돕는 AI 튜터" },
     { name: "For god", field: "기타", topic: "계약서·진단서 속 어려운 용어를 풀어 주는 앱" },
     { name: "미원", field: "행정·법무", topic: "교회 행정 업무를 돕는 AI" },
     { name: "비트와 와트", field: "환경·에너지", topic: "회로, 파형, AI 문답을 연결하는 학습 시뮬레이터" },
     { name: "지지직", field: "지역 상권·관광", topic: "공연장·영화관 시야를 예측해 좌석을 추천하는 AI" },
-    { name: "문과의반란", field: "", topic: "" },
-    { name: "에이아이", field: "", topic: "" },
+    { name: "문과의반란", field: "", topic: "어려운 전공 용어를 쉬운 말로 풀어 주는 AI 번역기" },
+    { name: "에이아이", field: "", topic: "사진 한 장으로 미생물 집락을 분석하는 교육용 AI" },
     { name: "NATURA", field: "환경·에너지", topic: "강우·환경 데이터로 수질오염 위험 지역을 예측" },
     { name: "SKYLINE AI", field: "", topic: "AI를 활용한 스마트 강의 관리 시스템" },   // 개인 신청 매칭팀
     { name: "페이사이트", field: "", topic: "", nosub: true },
-    { name: "하트", field: "", topic: "" }
+    { name: "하트", field: "", topic: "CTO 혈관 주행 경로 예측과 실시간 ECG 분석 AI" }
   ],
 
   schedule: {
