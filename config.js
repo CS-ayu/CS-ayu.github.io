@@ -25,9 +25,9 @@ window.CONTEST = {
      name: 팀명 (비우면 '팀명 정하는 중'), field: 분야 (비우면 '분야 정하는 중'),
      topic: 한 줄 주제 (비우면 '주제 정하는 중'). 팀을 빼려면 그 줄을 지우세요. */
   teams: [
-    { name: "22학번", field: "건강·생활안전", topic: "음식 알레르기와 영양성분을 고려한 식단 관리" },
+    { name: "22학번", field: "건강·생활안전", topic: "음식 알레르기와 영양성분을 고려한 식단 관리", nosub: true },
     { name: "밀당", field: "지역 상권·관광", topic: "빅데이터로 지역 불균형을 분석하는 AI" },
-    { name: "뉴트리핏", field: "건강·생활안전", topic: "바쁜 현대인을 위한 AI 맞춤 영양 관리" },
+    { name: "뉴트리핏", field: "건강·생활안전", topic: "바쁜 현대인을 위한 AI 맞춤 영양 관리", nosub: true },
     { name: "마프할랩", field: "교육·학습", topic: "ATmega128 학습을 돕는 AI 시뮬레이션" },
     { name: "김이서", field: "", topic: "AI가 낯선 사회적 약자도 AI 혜택을 누리게 돕는 서비스" },
     { name: "컴공23", field: "캠퍼스 생활", topic: "버튼 하나로 PC 네트워크 문제를 진단·해결하는 네트워크 닥터" },
@@ -43,13 +43,13 @@ window.CONTEST = {
     { name: "먀먀", field: "교육·학습", topic: "블록선도·수식을 인식해 제어공학 과제를 돕는 AI 튜터" },
     { name: "For god", field: "기타", topic: "계약서·진단서 속 어려운 용어를 풀어 주는 앱" },
     { name: "미원", field: "행정·법무", topic: "교회 행정 업무를 돕는 AI" },
-    { name: "비트와 와트", field: "환경·에너지", topic: "센서와 AI로 생활 속 불편과 낭비를 줄이는 서비스" },
+    { name: "비트와 와트", field: "환경·에너지", topic: "회로, 파형, AI 문답을 연결하는 학습 시뮬레이터" },
     { name: "지지직", field: "지역 상권·관광", topic: "공연장·영화관 시야를 예측해 좌석을 추천하는 AI" },
     { name: "문과의반란", field: "", topic: "" },
     { name: "에이아이", field: "", topic: "" },
     { name: "NATURA", field: "환경·에너지", topic: "강우·환경 데이터로 수질오염 위험 지역을 예측" },
     { name: "SKYLINE AI", field: "", topic: "AI를 활용한 스마트 강의 관리 시스템" },   // 개인 신청 매칭팀
-    { name: "페이사이트", field: "", topic: "" },
+    { name: "페이사이트", field: "", topic: "", nosub: true },
     { name: "하트", field: "", topic: "" }
   ],
 
