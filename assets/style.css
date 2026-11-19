@@ -267,6 +267,7 @@ a.dl[href]:hover{border-color:var(--blue)}
 .team .tn{font-weight:800;font-size:18px;line-height:1.35}
 .team .tt{font-size:15px;color:var(--ink-2);line-height:1.5}
 .team.tbd .tn{color:var(--ink-2);font-weight:700}
+.team.nosub .tn{color:#9aa0a6;text-decoration:line-through;text-decoration-thickness:2px}
 h2 .count{font-size:.55em;font-weight:700;color:var(--accent-text);margin-left:.35em;vertical-align:.25em}
 
 /* footer band */
