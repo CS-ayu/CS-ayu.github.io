@@ -145,6 +145,7 @@
       $('.tn', li).textContent = t.name || '팀명 정하는 중';
       $('.tt', li).textContent = t.topic || '주제 정하는 중';
       if (!t.name) li.classList.add('tbd');
+      if (t.nosub) { li.classList.add('nosub'); li.title = '예선 자료 미제출'; }
       teamList.appendChild(li);
     });
     var tc = $('#team-count'); if (tc && TEAMS.length) tc.textContent = TEAMS.length + '팀';
