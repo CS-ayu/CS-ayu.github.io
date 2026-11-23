@@ -49,7 +49,7 @@
     if (now < open) m = '참가 신청 ' + b(fmt(open, 'mdw') + ' 시작 · ' + dday(open, now));
     else if (now <= close) m = '참가 신청 중 · 마감 ' + b(dday(close, now)) + ' (' + fmt(close, 'mdt') + ')';
     else if (now <= pre) m = '예선 자료 제출 마감 ' + b(dday(pre, now)) + ' (' + fmt(pre, 'mdt') + ')';
-    else if (now < ann) m = '예선 심사 중 · ' + b(fmt(ann, 'mdw')) + ' 본선 진출팀 안내';
+    else if (now < ann) m = '예선 심사 중 · ' + b(fmt(ann, 'mdwt')) + ' 본선 진출팀 안내';
     else if (now <= fin) m = '본선 자료 제출 마감 ' + b(dday(fin, now)) + ' (' + fmt(fin, 'mdt') + ')';
     else if (now <= endOfDay(fday)) m = '본선 발표·시연 ' + b(dday(fday, now)) + ' (' + fmt(fday, 'mdw') + ')';
     else m = '대회가 끝났습니다 · 수상작 ' + b(fmt(res, 'mdw')) + '까지 공개';
